@@ -11,6 +11,9 @@
 # Features
 
 ・ScssにてCssコーディングを行う。
+ ※コンパイルには、『Live Sass Compiler』を使うこと。
+ ※設定 > setting.jsonを編集 → 
+ 　"liveSassCompile.settings.formats"内のパスを合わせること。
 
 # Requirement
 
@@ -18,15 +21,9 @@
 * Colorbox 1.6.4　→　「scss/introduction/_colorBox.scss」
 * slick-1.8.1　→　「scss/introduction/_slick-theme.scss + _slick.scss」
 
-# Usage
-
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
-
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
+# AOS
+サイトに動きをつけたい場合は、『AOS』を使うこと。
+https://github.com/michalsnik/aos
 
 # Note
 

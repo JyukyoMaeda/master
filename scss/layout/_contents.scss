@@ -1,0 +1,63 @@
+.l-contents{
+	width: 100%;
+	height: auto;
+	&.-img{// 背景画像のみ
+		width: 100%;
+		height: auto;
+	}
+	&.-img-bg{// 背景画像＋コンテンツ
+		position: relative;
+		.imgBox{// 背景画像
+			width: 100%;
+			height: auto;
+		}
+		.l-contentsBox{// コンテンツ要素
+			width: 100%;
+			position: absolute;
+			&.-w--center{// 横 --- 中央
+				// top:50%;
+				left: 50%;
+				transform: translateX(-50%);
+				@include mq(tb){
+					// top: 50%;
+				}
+			}
+			&.-w--right{// 横 --- 右
+				// top:50%;
+				right: 10%;
+				// transform: translateX(-50%);
+				@include mq(tb){
+					// top: 43.5%;
+					// right:50%;
+				}
+			}
+			&.-w--left{// 横 --- 左
+				// top:50%;
+				left: 10%;
+				// transform: translateX(-50%);
+				@include mq(tb){
+					// top: 43.5%;
+					// left:50%;
+				}
+			}
+			.l-contentsBox--wrapper{
+				width: 100%;
+				height: auto;
+				@include mq(tb){
+					width: 100%;
+					max-width: 1315px;
+					margin: auto;
+
+				}
+			}
+		}
+	}
+	// 基本的にSliderは、「Slick or Swiper」を使用すること
+	// 場所：「Scss/introduction内」
+	&.-slider{
+		//下記スマホ以上
+		@include mq(tb){
+		}
+	}
+}
+

@@ -1,0 +1,131 @@
+
+
+.gaiyo_wrap{
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-around;
+  }
+  
+  .gaiyo_link{
+  margin: 10px 0px 20px 0px;
+  }
+  
+  .gaiyo_link a {
+  text-align: center;
+  font-size: 130%;
+    position: relative;
+    display: inline-block;
+    transition: .3s;
+    color: #6F96BB;
+  }
+  .gaiyo_link a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: #2ecc71;
+    transition: .3s;
+  }
+  .gaiyo_link a:hover::after {
+    width: 100%;
+  }
+  
+  .gaiyo_link a:hover{
+  color: #2ecc71;
+  }
+  
+  .gaiyo_link a span{
+  display: block;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 100%;
+  }
+
+//     @media print, screen and (min-width: 767px){
+//         .gaiyo_wrap{
+//             max-width: 700px;
+//             margin: 0 auto;
+//             display: flex;
+//             justify-content: space-around;
+//             .gaiyo_link {
+//                 text-align: center;
+//                 margin: 100px 0px;
+//                 a{
+//                     font-size: 180%;
+//                     position: relative;
+//                     display: inline-block;
+//                     transition: .3s;
+//                     color: #000000;
+//                     &::after{
+//                         position: absolute;
+//                         bottom: 0;
+//                         left: 0;
+//                         content: '';
+//                         width: 0;
+//                         height: 1px;
+//                         background-color: #2ecc71;
+//                         transition: .3s;
+//                     }
+//                     span{
+//                         display: block;
+//                         background: #000;
+//                         color: #fff;
+//                         padding: 10px;
+//                         margin-bottom: 10px;
+//                         font-size: 100%;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+@media print, screen and (min-width: 767px){
+.gaiyo_wrap{
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  }
+  
+  .gaiyo_link{
+  text-align: center;
+  margin: 100px 0px;
+  }
+  
+  .gaiyo_link a {
+  font-size: 180%;
+    position: relative;
+    display: inline-block;
+    transition: .3s;
+    color: #000000;
+  }
+  .gaiyo_link a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: #2ecc71;
+    transition: .3s;
+  }
+  .gaiyo_link a:hover::after {
+    width: 100%;
+  }
+  
+  .gaiyo_link a:hover{
+  color: #2ecc71;
+  }
+  
+  .gaiyo_link a span{
+  display: block;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 100%;
+  }
+}

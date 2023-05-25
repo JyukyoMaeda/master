@@ -1,0 +1,94 @@
+
+
+// -----------------------------------------------
+// 開発中
+//下記スマホ未満
+@include mq(sp){
+	.sp{
+		display: block !important;
+	}
+	.pc{
+		display: none !important;
+	}
+}
+//下記スマホ以上
+@include mq(tb){
+	.sp{
+		display: none !important;
+	}
+	.pc{
+		display: block !important;
+	}
+}
+// 開発中ここまで
+// -----------------------------------------------
+
+
+body{
+	animation: fadein 1s forwards;
+}
+
+
+// 幅調整用 margin = 要素外の空間
+// 上のみ
+.l-mgt_5{
+	//mgt=「margin-top」の略です。
+	//文末の数字は、「PC」でも数値に合わせて設計してください。「sp」時は、1/2です。
+	margin-top: 2.5vh !important;
+	@include mq(tb){
+		margin-top: 5vh !important;
+	}
+}
+.l-mgt_10{
+	margin-top: 5vh !important;
+	@include mq(tb){
+		margin-top: 10vh !important;
+	}
+}
+.l-mgt_-10{
+	margin-top: -5px !important;
+	@media screen and (min-width: 767px){
+		margin-top: -10px !important;
+	}
+}
+// 下のみ
+.l-mgb_5{
+	margin-bottom : 2.5vh !important;
+	@include mq(tb){
+		margin-bottom: 5vh !important;
+	}
+}
+.l-mgb_10{
+	margin-bottom : 5vh !important;
+	@include mq(tb){
+		margin-bottom: 10vh !important;
+	}
+}
+
+// 幅調整用 padding = 要素内の空間
+// 上のみ
+.l-pdt_5{
+	padding-top : 2.5vh !important;
+	@include mq(tb){
+		padding-top: 5vh !important;
+	}
+}
+.l-pdt_10{
+	padding-top : 5vh !important;
+	@include mq(tb){
+		padding-top: 10vh !important;
+	}
+}
+// 下のみ
+.l-pdb_5{
+	padding-bottom : 2.5vh !important;
+	@include mq(tb){
+		padding-bottom: 5vh !important;
+	}
+}
+.l-pdb_10{
+	padding-bottom : 5vh !important;
+	@include mq(tb){
+		padding-bottom: 10vh !important;
+	}
+}
