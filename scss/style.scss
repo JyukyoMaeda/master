@@ -38,6 +38,11 @@
 @import "./introduction/aos";
 @import "./introduction/menu";
 @import "./introduction/pageTop";
+@import "./introduction/swiper";
+
+
+// 各ページ独自のスタイル
+@import "./page/setsubi";
 
 // アニメーション
 @import "./animetion/fadeIn";

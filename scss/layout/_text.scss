@@ -214,6 +214,61 @@
                 }
             }
         }
+        &.-s10{
+            @include mq(sp){
+                font-size: 10px;
+            }
+        }
+        &.-s12{
+            @include mq(sp){
+                font-size: 12px;
+            }
+        }
+        &.-s14{
+            @include mq(sp){
+                font-size: 14px;
+            }
+        }
+        &.-s15{
+            @include mq(sp){
+                font-size: 15px;
+            }
+        }
+        &.-s16{
+            @include mq(sp){
+                font-size: 16px;
+            }
+        }
+        &.-s17{
+            @include mq(sp){
+                font-size: 17px;
+            }
+        }
+        &.-s18{
+            @include mq(sp){
+                font-size: 18px;
+            }
+        }
+        &.-s20{
+            @include mq(sp){
+                font-size: 20px;
+            }
+        }
+        &.-s24{
+            @include mq(sp){
+                font-size: 24px;
+            }
+        }
+        &.-s30{
+            @include mq(sp){
+                font-size: 30px;
+            }
+        }
+        &.-s32{
+            @include mq(sp){
+                font-size: 32px;
+            }
+        }
     // 位置
     &.-left{text-align: start;}
     &.-center{text-align: center;}
@@ -257,9 +312,9 @@
     &.-b{font-weight: bold !important;}
 
     // 形
-    &.-family01{//リュウミン
-        font-family: "a-otf-ryumin-pr6n", serif;
-        font-weight: 300;
+    &.-family01{//しっぽり明朝
+        font-family: "shippori-mincho", sans-serif;
+        font-weight: 400;
         font-style: normal;
     }
     &.-family02{//A1MinchoStd Bold代用
@@ -268,8 +323,8 @@
         font-style: normal;
     }
     &.-family03{//しっぽり
-        font-family: "shippori-mincho", sans-serif;
-        font-weight: 400;
+        font-family: "source-han-sans-japanese", sans-serif;
+        font-weight: 700;
         font-style: normal;
     }
     &.-family04{//garamond
@@ -278,7 +333,12 @@
         font-style: normal;
     }
     &.-family05{//メイリオ
-        // font-family:'メイリオ', 'Meiryo', sans-serif;
+        font-family:'メイリオ', 'Meiryo', sans-serif;
+    }
+    &.-family06{//Trajan
+        font-family: "trajan-pro-3", serif;
+        font-weight: 400;
+        font-style: normal;
     }
 
     &.-REQUEST{

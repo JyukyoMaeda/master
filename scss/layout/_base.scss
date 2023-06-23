@@ -1,4 +1,14 @@
-
+.letter{
+	&-s01{
+		letter-spacing: -11px
+	}
+	&-s02{
+		letter-spacing: -17px
+	}
+	&-s03{
+		letter-spacing: -9px
+	}
+}
 
 // -----------------------------------------------
 // 開発中
@@ -7,16 +17,38 @@
 	.sp{
 		display: block !important;
 	}
-	.pc{
+	.pc,
+	.pc1000-max,
+	.pc1600{
 		display: none !important;
 	}
 }
 //下記スマホ以上
 @include mq(tb){
+	.sp,
+	.pc1600{
+		display: none !important;
+	}
+	.pc1000-max,
+	.pc{
+		display: block !important;
+	}
+}
+
+// ブラウザ1000以上
+@include mq(tb-pc1000){
 	.sp{
 		display: none !important;
 	}
-	.pc{
+	.pc1000-max{
+		display: black !important;
+	}
+}
+
+// ブラウザ1400以上
+@include mq(tb-pc1600){
+
+	.pc1600{
 		display: block !important;
 	}
 }
@@ -25,13 +57,67 @@
 
 
 body{
-	animation: fadein 1s forwards;
+	animation: fadein 2s forwards;
 }
 img{
-	// pointer-events: none;
+	pointer-events: none;
 	user-drag: none;
 	-webkit-user-drag: none;
 	-moz-user-select: none;
+	vertical-align: bottom;
+}
+#sp-btm-contactArea{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+    z-index: 9999;
+}
+#pc-right-contactArea{
+    position: fixed;
+    top: 33%;
+    right: 2%;
+    z-index: 9999;
+    .base-bg{
+        max-width: 45px;
+    }
+
+}
+
+
+
+.w1200{
+	width: 95% !important;
+	max-width: 1200px;
+	margin: auto;
+	&.-s100{
+		width: 100% !important;
+	}
+}
+.w1050{
+	width: 95%;
+	max-width: 1050px;
+	margin: auto;
+}
+.w90-s{
+	@include mq(sp){
+		width: 90% !important;
+		margin: auto;
+	}
+}
+.w93-s{
+	@include mq(sp){
+		width: 93% !important;
+		margin: auto;
+	}
+}
+.tb-w95{
+	@include mq(tb){
+		width: 95% !important;
+		margin: auto;
+	}
 }
 
 
@@ -51,13 +137,88 @@ img{
 		margin-top: 10vh !important;
 	}
 }
+.l-mgt_10{
+	margin-top: 5vh !important;
+	@include mq(tb){
+		margin-top: 10vh !important;
+	}
+}
 .l-mgt_-10{
 	margin-top: -5px !important;
 	@media screen and (min-width: 767px){
 		margin-top: -10px !important;
 	}
 }
+.l-mgt_-30{
+	margin-top: -27px !important;
+	@media screen and (min-width: 767px){
+		margin-top: -30px !important;
+	}
+}
+.l-mgb_-2_s{
+	@include mq(sp){
+		margin-top: -2vh !important;
+	}
+}
+
+
+
 // 下のみ
+.l-mgb_1_s{
+	@include mq(sp){
+		margin-bottom: 1vh !important;
+	}
+}
+.l-mgb_2_s{
+	@include mq(sp){
+		margin-bottom: 2vh !important;
+	}
+}
+.l-mgb_5_s{
+	@include mq(sp){
+		margin-bottom: 5vh !important;
+	}
+}
+.l-mgb_8_s{
+	@include mq(sp){
+		margin-bottom: 8vh !important;
+	}
+}
+.l-mgb_10_s{
+	@include mq(sp){
+		margin-bottom: 10vh !important;
+	}
+}
+.l-mgb_15_s{
+	@include mq(sp){
+		margin-bottom: 15vh !important;
+	}
+}
+.l-mgb_1{
+	margin-bottom: 1vh !important;
+	@include mq(tb){
+		margin-bottom: 1vh !important;
+	}
+	&.-s_5{
+		@include mq(sp){
+			margin-bottom: 5vh !important;
+		}
+	}
+}
+.l-mgb_2{
+	margin-bottom: 2vh !important;
+}
+.l-mgb_3{
+	margin-bottom : 2vh !important;
+	&.-s_1{
+		@include mq(sp){
+			margin-bottom: 1vh !important;
+		}
+	}
+	@include mq(tb){
+		margin-bottom: 3vh !important;
+	}
+}
 .l-mgb_5{
 	margin-bottom : 2.5vh !important;
 	@include mq(tb){
@@ -65,11 +226,47 @@ img{
 	}
 }
 .l-mgb_10{
-	margin-bottom : 5vh !important;
+	margin-bottom : 8vh !important;
+	&.-s_1{
+		@include mq(sp){
+			margin-bottom: 1vh !important;
+		}
+	}
+	&.-s_5{
+		@include mq(sp){
+			margin-bottom: 5vh !important;
+		}
+	}
 	@include mq(tb){
 		margin-bottom: 10vh !important;
 	}
 }
+.l-mgb_20{
+	margin-bottom : 10vh !important;
+	&.-s_1{
+		@include mq(sp){
+			margin-bottom: 1vh !important;
+		}
+	}
+	&.-s_5{
+		@include mq(sp){
+			margin-bottom: 5vh !important;
+		}
+	}
+	@include mq(tb){
+		margin-bottom: 20vh !important;
+	}
+}
+
+.l-mgb_or{
+	margin-bottom: 0.4vh;
+	@include mq(tb){
+		margin-bottom: 0.7vh;
+	}
+}
+
+
+
 
 // 幅調整用 padding = 要素内の空間
 // 上のみ
@@ -96,5 +293,12 @@ img{
 	padding-bottom : 5vh !important;
 	@include mq(tb){
 		padding-bottom: 10vh !important;
+	}
+}
+
+.border{
+	border-bottom: 1px solid black;
+	@include mq(tb){
+
 	}
 }

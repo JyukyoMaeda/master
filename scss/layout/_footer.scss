@@ -177,7 +177,7 @@
                 margin: auto auto 5px !important;
             }
             @include mq(tb){
-                width: 50%;
+                width: 70%;
                 max-width: 330px;
                 margin-right: 25px !important;
             }
@@ -188,7 +188,7 @@
             margin: auto !important;
             text-align: center;
             @include mq(tb){
-                width: 50%;
+                width: 30%;
                 margin-left: 25px !important;
             }
         }
