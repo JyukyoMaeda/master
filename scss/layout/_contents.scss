@@ -10,6 +10,21 @@
 		.imgBox{// 背景画像
 			width: 100%;
 			height: auto;
+			&.-parallax{//パラドックス背景の場合、ここは透明画像
+				justify-content: center;
+				align-items: center;
+
+				background-attachment: fixed;
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				&.-parallax_bg{//ここに背景を指定する。
+					background-image: url(../images/bg/header_bg_s.jpg);
+					@include mq(tb){
+						background-image: url(../images/bg/header_bg.jpg);
+					}
+				}
+			}
 		}
 		.l-contentsBox{// コンテンツ要素
 			width: 100%;
@@ -43,8 +58,12 @@
 					width: 100%;
 					max-width: 1315px;
 					margin: auto;
-
 				}
+			}
+			&.-text{
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
 			}
 		}
 	}
