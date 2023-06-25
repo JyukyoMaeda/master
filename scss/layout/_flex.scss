@@ -44,6 +44,22 @@
 					padding-left: 0 !important;
 				}
 			}
+			&.-youtubeBox{
+				padding: 0 5vw;
+				@include mq(tb){
+					padding: 0 1.5vw;
+				}
+				&.-left{
+					@include mq(tb){
+						padding: 0 1.5vw 0 0;
+					}
+				}
+				&.-right{
+					@include mq(tb){
+						padding: 0 0 0 1.5vw;
+					}
+				}
+			}
 		}
 		// スマホ時 > 順番逆
 		&.-reverse_s{
