@@ -388,6 +388,54 @@
 			}
 		}
 
+		&.-gaiyo-2_1{
+			display: flex;
+			flex-wrap: wrap;
+			align-items:center;
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-around;
+				align-items: flex-start;
+			}
+			.flexItem{
+				&:nth-child(1){
+					width: 60%;
+					padding: 0 2%;
+					margin: auto;
+					@include mq(tb){
+						width: 55%;
+						padding: 0 2%;
+					}
+				}
+				&:nth-child(2){
+					width: 60%;
+					padding: 0 2%;
+					margin: auto;
+					@include mq(tb){
+						width: 30%;
+						padding: 0 2%;
+					}
+				}
+
+			}
+		}
+		&.-gaiyo{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-around;
+			}
+			.flexItem{
+				width: 100% !important;
+				@include mq(tb){
+					width: 50% !important;
+					padding: 0 2%;
+				}
+		}
+		}
+
 	}
 }
 

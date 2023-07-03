@@ -101,6 +101,11 @@ img{
 	max-width: 1050px;
 	margin: auto;
 }
+.w850{
+	width: 95%;
+	max-width: 850px;
+	margin: auto;
+}
 .w90-s{
 	@include mq(sp){
 		width: 90% !important;

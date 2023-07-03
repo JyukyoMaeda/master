@@ -58,3 +58,14 @@
     }
   }
 }
+
+
+.border-box{
+  display: block;
+  border: 1px solid black;
+  color: black;
+  letter-spacing: 0.5px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
