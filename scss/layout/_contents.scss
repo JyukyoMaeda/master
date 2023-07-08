@@ -29,20 +29,21 @@
 		.l-contentsBox{// コンテンツ要素
 			width: 100%;
 			position: absolute;
+			
 			//サイト右側中段に表示 （PCのみ）
-			&.-topBtn{
-				top: 0;
+			&.-right-topBtn{
+				top: 2.5%;
 				left: 50%;
 				transform: translateX(-50%);
 				width: 100%;
 				a{
 					display: block;
-					padding: 15% 23%;
+					padding: 8% 23%;
 				}
 			}
 			// サイト下部に表示（SPのみ）
-			&.-btmBtn{
-				top: 50%;
+			&.-right-btmBtn{
+				top: 52.5%;
 				left: 50%;
 				transform: translateX(-50%);
 				width: 100%;

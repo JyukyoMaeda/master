@@ -66,25 +66,7 @@ img{
 	-moz-user-select: none;
 	vertical-align: bottom;
 }
-#sp-btm-contactArea{
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
 
-    width: 100%;
-    z-index: 9999;
-}
-#pc-right-contactArea{
-    position: fixed;
-    top: 33%;
-    right: 2%;
-    z-index: 9999;
-    .base-bg{
-        max-width: 45px;
-    }
-
-}
 
 
 

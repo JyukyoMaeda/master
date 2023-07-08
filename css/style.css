@@ -123,25 +123,6 @@ img {
   vertical-align: bottom;
 }
 
-#sp-btm-contactArea {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  z-index: 9999;
-}
-
-#pc-right-contactArea {
-  position: fixed;
-  top: 33%;
-  right: 2%;
-  z-index: 9999;
-}
-#pc-right-contactArea .base-bg {
-  max-width: 45px;
-}
-
 .w1200 {
   width: 95% !important;
   max-width: 1200px;
@@ -517,23 +498,23 @@ img {
   width: 100%;
   position: absolute;
 }
-.l-contents.-img-bg .l-contentsBox.-topBtn {
-  top: 0;
+.l-contents.-img-bg .l-contentsBox.-right-topBtn {
+  top: 2.5%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
 }
-.l-contents.-img-bg .l-contentsBox.-topBtn a {
+.l-contents.-img-bg .l-contentsBox.-right-topBtn a {
   display: block;
-  padding: 15% 23%;
+  padding: 8% 23%;
 }
-.l-contents.-img-bg .l-contentsBox.-btmBtn {
-  top: 50%;
+.l-contents.-img-bg .l-contentsBox.-right-btmBtn {
+  top: 52.5%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
 }
-.l-contents.-img-bg .l-contentsBox.-btmBtn a {
+.l-contents.-img-bg .l-contentsBox.-right-btmBtn a {
   display: block;
   padding: 8% 23%;
 }
@@ -768,6 +749,36 @@ img {
 }
 .l-flex--area .l-flex--contents.-contact-box .flexItem:nth-child(4) .l-linkImg {
   background: hsla(194, 100%, 11%, 0.4);
+}
+.l-flex--area .l-flex--contents.-contact-box_okano {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+}
+@media screen and (min-width: 767px) {
+  .l-flex--area .l-flex--contents.-contact-box_okano {
+    width: 75%;
+    justify-content: space-evenly;
+  }
+}
+.l-flex--area .l-flex--contents.-contact-box_okano .flexItem {
+  width: 30%;
+}
+@media screen and (min-width: 767px) {
+  .l-flex--area .l-flex--contents.-contact-box_okano .flexItem {
+    width: 30%;
+  }
+}
+.l-flex--area .l-flex--contents.-contact-box_okano .flexItem:nth-child(1) .l-linkImg {
+  background: #002a37;
+}
+.l-flex--area .l-flex--contents.-contact-box_okano .flexItem:nth-child(2) .l-linkImg {
+  background: hsla(194, 100%, 11%, 0.8);
+}
+.l-flex--area .l-flex--contents.-contact-box_okano .flexItem:nth-child(3) .l-linkImg {
+  background: hsla(194, 100%, 11%, 0.6);
 }
 .l-flex--area .l-flex--contents.-tab-box {
   width: 90vw;
@@ -2419,6 +2430,34 @@ img {
 .l-contents.-youtubeArea .youtubeArea-wrapper iframe {
   width: 100%;
   height: 100%;
+}
+
+#sp-btm-contactArea {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 9999;
+}
+
+#pc-right-contactArea {
+  background: #002a37;
+  border: 1px solid #002a37;
+  position: fixed;
+  top: 33%;
+  right: 2%;
+  z-index: 9999;
+}
+#pc-right-contactArea .base-bg {
+  max-width: 45px;
+}
+
+svg#rightBtn_top .cls-1 {
+  fill: #002a37;
+}
+svg #rightBtn_btm .cls-1 {
+  fill: #ffffff;
 }
 
 .l-testBg {
