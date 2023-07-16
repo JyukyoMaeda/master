@@ -1,13 +1,16 @@
 
-
 #sp-btm-contactArea{
+    background: $site-color01;
+	border: 1px solid $site-color01;
     position: fixed;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-
     width: 100%;
     z-index: 9999;
+    .base-bg{
+        max-width: 100%;
+    }
 }
 
 
@@ -20,6 +23,7 @@
     right: 2%;
     z-index: 9999;
     .base-bg{
+        height: auto;
         max-width: 45px;
     }
 }
@@ -35,5 +39,22 @@ svg{
         .cls-1{
             fill: $main-color--w;
         }
+    }
+
+    &#bottomBtn_left{
+        .cls-1 {
+            fill: none;
+        }
+        .cls-2{
+            fill: black;
+        }
+    }
+    &#bottomBtn_right{
+        .cls-1{
+            fill: $main-color--w;
+        }
+        .cls-2 {
+            fill: none;
+          }
     }
 }

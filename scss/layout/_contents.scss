@@ -52,6 +52,30 @@
 					padding: 8% 23%;
 				}
 			}
+			//サイト下部に表示 （SPのみ）
+			&.-bottom-rightBtn{
+				top: 0%;
+				left: 75%;
+				transform: translateX(-50%);
+				width: 100%;
+				a{
+					display: block;
+					padding: 0% 24%;
+				}
+			}
+			// サイト下部に表示（SPのみ）
+			&.-bottom-leftBtn{
+				top: 0%;
+				left: 25%;
+				transform: translateX(-50%);
+				width: 100%;
+				a{
+					display: block;
+					padding: 0% 24%;
+				}
+			}
+
+
 			.l-contentsBox--wrapper{
 				width: 100%;
 				height: auto;

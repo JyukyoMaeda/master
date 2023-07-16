@@ -518,6 +518,26 @@ img {
   display: block;
   padding: 8% 23%;
 }
+.l-contents.-img-bg .l-contentsBox.-bottom-rightBtn {
+  top: 0%;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.l-contents.-img-bg .l-contentsBox.-bottom-rightBtn a {
+  display: block;
+  padding: 0% 24%;
+}
+.l-contents.-img-bg .l-contentsBox.-bottom-leftBtn {
+  top: 0%;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.l-contents.-img-bg .l-contentsBox.-bottom-leftBtn a {
+  display: block;
+  padding: 0% 24%;
+}
 .l-contents.-img-bg .l-contentsBox .l-contentsBox--wrapper {
   width: 100%;
   height: auto;
@@ -2433,12 +2453,17 @@ img {
 }
 
 #sp-btm-contactArea {
+  background: #002a37;
+  border: 1px solid #002a37;
   position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   z-index: 9999;
+}
+#sp-btm-contactArea .base-bg {
+  max-width: 100%;
 }
 
 #pc-right-contactArea {
@@ -2450,6 +2475,7 @@ img {
   z-index: 9999;
 }
 #pc-right-contactArea .base-bg {
+  height: auto;
   max-width: 45px;
 }
 
@@ -2458,6 +2484,18 @@ svg#rightBtn_top .cls-1 {
 }
 svg #rightBtn_btm .cls-1 {
   fill: #ffffff;
+}
+svg#bottomBtn_left .cls-1 {
+  fill: none;
+}
+svg#bottomBtn_left .cls-2 {
+  fill: black;
+}
+svg#bottomBtn_right .cls-1 {
+  fill: #ffffff;
+}
+svg#bottomBtn_right .cls-2 {
+  fill: none;
 }
 
 .l-testBg {
