@@ -8,7 +8,9 @@
 
     }
     // 東久留米支店
-    &.-higashikurume{
+    // 若葉支店
+    &.-higashikurume,
+    &.-wakaba{
         @include mq(tb){
             display: flex;
             flex-wrap: nowrap;
