@@ -46,7 +46,7 @@
         left: 50%;
         transform: translate(-50%,-50%);
     }
-  }
+}
 
 .l-modal--btn {
     padding: 10px;
@@ -56,6 +56,65 @@
     cursor: pointer;
 }
 
-#openModal {
-    
+.inline_modal {
+    display:none;
+    .modalItem{
+        img{
+            @include mq(tb){
+                // width: 75%;
+            }
+        }
+    }
+}
+#inline_content{
+    text-align: center;
+    @include mq(sp){
+        // margin: 10px;
+    }
+}
+// 閉じるボタン
+#cboxClose{
+    @include mq(sp){
+        top: -16px !important;
+        right: -12px !important;
+        transform: scale(.5, .5);
+    }
+}
+.close_btn_area{
+    text-align: left;
+    cursor: pointer;
+    @include mq(sp){
+        transform: scale(.6, .6);
+    }
+}
+.square_btn {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 30px;
+    background: #E9E9E9;
+    line-height: 2.1;
+    padding-left: 5px;
+    @include mq(tb){
+        line-height: 2.3;
+    }
+    &::before,
+    &::after{
+        content: "";
+        position: absolute;
+        top: 47%;
+        right: 15%;
+        width: 1.5px;
+        height: 15px;
+        /* border-radius: 50%; */
+        background: #000;
+    }
+    &::before {
+        transform: translate(-50%,-50%) rotate(45deg);
+    }
+    &::after {
+        transform: translate(-50%,-50%) rotate(-45deg);
+    }
 }

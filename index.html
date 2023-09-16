@@ -165,11 +165,23 @@
                         </div>
                     </div>
                 </div>
-            </div>            <!-- コンテンツ2 -->
-            <div id="content2" class="l-contents -img">
-                <img class="pc" src="images/bg/location.jpg" alt="">
-                <img class="sp" src="images/bg/location_s.jpg" alt="">
             </div>
+
+            <!-- 画像モーダルを使用する場合 -->
+            <div id="content2" class="l-contents -img-bg">
+                <!-- 背景 -->
+                <div class="imgBox">
+                    <img class="pc" src="" alt="">
+                    <img class="sp" src="" alt="">
+                </div>
+                <!-- モーダルを表示するボタン(#modal01) -->
+                <div class="l-contentsBox -img-modal">
+                    <a class="inline cboxElement l-linkImg -p03" href="#modal01">
+                        <img src="images/btn/" alt="">
+                    </a>
+                </div>
+            </div>
+            
             <!-- タブ-コンテンツ -->
             <!-- <div id="content3" class="l-contents -img-bg">
                 <div class="imgBox">
@@ -335,6 +347,22 @@
             </div>
         </div>
     </div> -->
+
+    <!-- 南道路が良いとされている理由 / モーダル -->
+    <!-- 画像サイズは、直接指定すること -->
+    <div class="inline_modal">
+        <div id="modal01" class="">
+            <img class="pc" style="width: 50vw; margin: auto;" src="" alt="">
+            <img class="sp" style="width: 85vw;" src="" alt="">
+        </div>
+        <!-- 複数モーダルを使う際の記述 -->
+        <!-- <div id="modal02" class="">
+            <img src="" alt="">
+        </div> -->
+    </div>
+
+
+
 
     <!-- トップに戻る -->
     <p id="pageTop"><a href="#">ページ<br>TOP</a></p>
@@ -507,11 +535,24 @@
         AOS.init();
         // モーダル関係
         $(function() {
+            // リンク先を表示するモーダル（iframe）
             $(".iframe").colorbox({
                 iframe:true,
                 width:"80%",
                 height:"90%",
                 opacity: 0.7
+            });
+            // 画像モーダル（inline）
+            $(document).ready(function(){
+                $(".inline").colorbox({
+                    inline:true,
+                    width:"auto",
+                    height: "auto"
+                });
+                // HTMLで指定したIDの要素をクリックするとColorBoxウィンドウが閉じます。
+                $("#cboxClose_bottom,#cboxClose_bottom_m01").click(function(){
+                    parent.$.fn.colorbox.close(); return false;
+                });
             });
         });
         // 通常スライダー用
