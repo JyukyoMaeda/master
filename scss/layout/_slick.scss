@@ -1,69 +1,21 @@
 
 .l-slider {
     margin: 30px 0 auto auto;
-    width: 91.8%;
     // width: 83%;
     // max-width: 500px;
     @include mq(tb){
-        margin: 60px 0 auto auto;
-        width: 83%;
+        // margin: 60px 0 auto auto;
+
     }
     @include mq(pc){
-        margin: 145px 0 auto auto;
+        // margin: 145px 0 auto auto;
     }
     .l-slickImg {
-        margin: 0 10px 10px;
+        margin: 0 5px 10px;
         text-align: end;
         img{
-            width: 90%;
+            width: 100%;
             height: auto;
-            @include mq(tb){
-                width: 100%;
-                height: auto;
-            }
-        }
-        a{
-            display: block;
-            color: $border-color--b;
-            background: $main-color--w;
-            font-weight: bold;
-            img,
-            .l-slickText{
-                transition: .5s all;
-                @include mq(sp){
-                    color: $pink-t;
-                    margin-right: 9vw;
-                }
-                &::after{
-                    @include mq(sp){
-                        background: $pink-t;
-                    }
-                }
-            }
-            &:hover{
-                color: $pink-t;
-                img{
-                    opacity: 0.7;
-                }
-                .l-slickText{
-                    &::after{
-                        background: $pink-t;
-                    }
-                }
-            }
-            .l-slickText{
-                position: relative;
-                display: inline-block;
-                &::after{
-                    content: "";
-                    width: 100%;
-                    height: 1.5px;
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    transition: .5s all;
-                }
-            }
         }
     }
 }
@@ -71,9 +23,11 @@
 
 
 .slide-arrow {
-    width: 8vw;
-    background: $main-color--w;
-    border-radius: 50%;
+    width: 3vw;
+    filter: drop-shadow(1px 1px 1px black);
+    pointer-events: all;
+    // background: $main-color--w;
+    // border-radius: 50%;
     transition: .8s all;
     @include mq(tb){
         width: 3vw;
@@ -84,16 +38,20 @@
         max-width: 80px;
     }
     &:hover{
-        background: $item-hover--bg;
+        @include mq(sp){
+            width: 4vw;
+        }
     }
   }
   .prev-arrow {
     position: absolute;
-    top: -7.5%;
-    left: 0%;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+    z-index: 1;
     @include mq(tb){
-        top: -8%;
-        left: 0;
+        // top: -8%;
+        // left: 0;
     }
     &:hover{
         
@@ -101,8 +59,10 @@
   }
   .next-arrow {
     position: absolute;
-    top: -7.5%;
-    left: 12%;
+    top: 50%;
+    right: 4%;
+    transform: translateY(-50%);
+    z-index: 1;
     @include mq(tb){
         top: -8%;
         left: 5%;
