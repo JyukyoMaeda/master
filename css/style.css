@@ -1288,6 +1288,11 @@ img {
   height: auto;
   margin: auto !important;
 }
+@media screen and (max-width: 768px) {
+  .l-footer.-sayama .l-footer--title {
+    margin-bottom: 1vh !important;
+  }
+}
 @media screen and (min-width: 767px) {
   .l-footer.-sayama .l-footer--title {
     width: 50%;
@@ -1296,11 +1301,14 @@ img {
   }
 }
 .l-footer.-sayama .l-footer--tel {
+  width: 80%;
   height: auto;
   margin: auto !important;
 }
 @media screen and (min-width: 767px) {
   .l-footer.-sayama .l-footer--tel {
+    width: 50%;
+    max-width: 360px;
     margin-left: 0 !important;
   }
 }
@@ -2639,6 +2647,63 @@ svg#bottomBtn_right .cls-2 {
   border: 1px solid #333333;
   border-radius: 2px;
   cursor: pointer;
+}
+
+.inline_modal {
+  display: none;
+}
+#inline_content {
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  #cboxClose {
+    top: -16px !important;
+    right: -12px !important;
+    transform: scale(0.5, 0.5);
+  }
+}
+
+.close_btn_area {
+  text-align: left;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .close_btn_area {
+    transform: scale(0.6, 0.6);
+  }
+}
+
+.square_btn {
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  height: 30px;
+  background: #E9E9E9;
+  line-height: 2.1;
+  padding-left: 5px;
+}
+@media screen and (min-width: 767px) {
+  .square_btn {
+    line-height: 2.3;
+  }
+}
+.square_btn::before, .square_btn::after {
+  content: "";
+  position: absolute;
+  top: 47%;
+  right: 15%;
+  width: 1.5px;
+  height: 15px;
+  /* border-radius: 50%; */
+  background: #000;
+}
+.square_btn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.square_btn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .l-testBg {
